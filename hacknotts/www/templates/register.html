@@ -1,0 +1,21 @@
+<ion-view view-title="Register">
+  <ion-content>
+    <div class="center stack-buttons">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="Username" ng-model="data.username">
+        </label>
+        <label class="item item-input">
+          <input type="email" placeholder="Email" ng-model="data.email">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Password" ng-model="data.password">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Confirm Password" ng-model="data.confirm">
+        </label>
+      </div>
+      <a class="button button-balanced" ng-click="register()">Register</a>
+    </div>
+  </ion-content>
+</ion-view>
