@@ -1,0 +1,128 @@
+/* Empty. Add your own CSS if you like */
+ion-content {
+  padding-top: 20px;
+  background-color: #efefef;
+}
+
+.pull-left {
+  float: left;
+}
+
+.margin0 {
+  margin: 0 !important;
+}
+
+.pull-right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.stack-buttons {
+  margin-top: 50px;
+  width: 70%;
+}
+
+.stack-buttons .button {
+  margin-bottom: 16px;
+  height: 50px;
+  width: 100%;
+  border: none;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto 100px;
+}
+
+.hidden-anchor {
+  visibility:hidden;
+  margin-bottom:40px;
+  display:block;
+  height:1px;
+}
+
+.container .frame-previous .frame{
+  margin-top: -20px;
+  overflow: visible;
+}
+.container .frame.journey-frame .row {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+
+.container .frame.journey-frame .button {
+  width: 70%;
+}
+
+.container .frame.journey-frame .card-footer {
+}
+
+.row.fading-row {
+  position: absolute;
+  background-color: rgba(239, 239, 239, 0.55);
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.repeat.reroute {
+  text-align: left;
+}
+
+.repeat.reroute .item h2 {
+  font-size: 20px;
+}
+
+.container.search-container {
+  margin-top: 50px;
+}
+
+.container.search-container .row{
+  margin-bottom: 16px;
+}
+
+li.ng-binding:hover {
+  background-color: rgba(102, 197, 53, 0.6);
+}
+
+.previous-text {
+  width: 100%;
+  border: 1px solid rgba(50, 50, 50, 0.15);
+  height: 120px;
+  padding: 10px;
+  /* box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5); */
+  border-radius: 10px;
+}
+
+.previous-total {
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.item.previous h2 {
+  font-size: 25px;
+}
+
+.participants {
+  overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.participants span {
+  float: left;
+  padding:2.5px 10px;
+  margin:2px 5px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: aqua;
+  font-size: 12px;
+}
