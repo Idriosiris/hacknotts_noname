@@ -1,14 +1,36 @@
-var express = require('express');
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 var request = require('superagent');
 var request = require('request');
+var db = require('./db');
 
 //open server
-var app = express();
+server.listen(3001);
+console.log('Listening on port 3001...');
 app.get('/', function(req, res) {
   res.send('Hello Seattle\n');
 });
-app.listen(3001);
-console.log('Listening on port 3001...');
+
+io.on('connection', function (socket) {
+  io.emit('this', { will: 'be received by everyone'});
+
+  socket.on('get_friends', function (data) {
+    db.query('SELECT * FROM friends', function(err, results){
+        if(err){ console.log('there has been an error !!')};
+        else {
+          console.log(results);
+          socket.emit('send_friends', results);
+        }
+    });
+    //socket.emit('send_friends', );
+  });
+
+  socket.on('disconnect', function () {
+    io.emit('user disconnected');
+  });
+  
+});
 
 function getDateTime() {
 
@@ -71,6 +93,7 @@ app.get('/make_transfer/:contributor/:payee/:amount', function(req, res){
 		res.send(body);
 	});
 });
+
 
 //res.json({"employees":[
 //    	{"firstName":req.params.name, "lastName":"Doe"},
